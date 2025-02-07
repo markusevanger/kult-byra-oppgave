@@ -1,0 +1,79 @@
+[
+    {
+        "date": "1975-01-04",
+        "category": ["Fagpolitikk"],
+        "title": "Navneendring",
+        "description": "Organisasjonen gjennomgikk en viktig endring ved å endre sitt navn til, noe som markerte en ny epoke for kunsthåndverkere i Norge.",
+        "attachments": [
+            "Last ned referat fra navneendring"
+        ]
+    },
+    {
+        "date": "2016-01-04",
+        "category": ["Gallerier"],
+        "title": "Etablering Galleri Vest",
+        "description": "Galleri Vest ble etablert i 2016, og representerte en ny plattform for visning og formidling av kunsthåndverk i regionen.",
+        "attachments": [
+            "Besøk Galleri Vest",
+            "Last ned referat"
+        ]
+    },
+    {
+        "date": "2015-01-01",
+        "category": ["Fagpolitikk"],
+        "title": "Navn på hendelse",
+        "description": "En viktig hendelse innen fagpolitikk for kunsthåndverkere fant sted i 2015, med betydelige implikasjoner for bransjen.",
+        "attachments": [
+            "Last ned"
+        ]
+    },
+    {
+        "date": "1974-01-01",
+        "category": ["Aksjoner"],
+        "title": "Kunstneraksjonen",
+        "description": "Kunstneraksjonen i 1974 var en viktig hendelse der en gruppe kunstnere gjennomførte en aksjon for å øke oppmerksomheten rundt kunstneres arbeid og endre offentlighetens oppfatning av kunst.",
+        "attachments": [
+            "Last ned løpeseddel"
+        ]
+    },
+    {
+        "date": "2017-03-10",
+        "category": ["Aksjoner"],
+        "title": "Aksjon for kunstnerstipend",
+        "attachments": [
+            "Last ned"
+        ]
+    },
+    {
+        "date": "2023-09-22",
+        "category": ["Gallerier"],
+        "title": "Galleri Vest utvides",
+        "attachments": [
+            "Last ned"
+        ]
+    },
+    {
+        "date": "2020-07-01",
+        "category": ["Hendelse"],
+        "title": "Hendelse uten innhold"
+    },
+    {
+        "date": "2012-12-13",
+        "category": ["Gallerier", "Åpninger"],
+        "title": "Etablering Format Bergen",
+        "description": "Format Bergen ble etablert i 2012, og markerte en betydningsfull utvidelse av kunstscenen i Bergen.",
+        "attachments": [
+            "Besøk Format Bergen",
+            "Last ned stiftelsesdokument"
+        ]
+    },
+    {
+        "date": "2021-09-04",
+        "category": ["Åpninger", "Fagpolitikk"],
+        "title": "Nyåpning",
+        "description": "En betydningsfull nyåpning fant sted, som markerte en ny fase eller utvidelse innen kunsthåndverkscenen.",
+        "attachments": [
+            "Besøk"
+        ]
+    }
+]

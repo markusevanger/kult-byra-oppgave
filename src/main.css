@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 @import "tailwindcss";
+
 
 @theme {
     /* --color-*: initial;  Uncomment to disable default tailwind color palette. */ 
-    --color-midnight: #121063;
-    --color-tahiti: #3ab7bf;
-    --color-bermuda: #78dcca;
+    --default-font-family: "Inter", "sans-serif"
   }

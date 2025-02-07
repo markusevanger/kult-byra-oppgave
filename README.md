@@ -1,3 +1,1 @@
-# Template for React, Tailwind frontend development
-
-
+# Prosjekt for Kult Byrå
