@@ -3,5 +3,14 @@ export interface Event {
     category: string[];
     title: string;
     description?: string;
-    attachments?: string[];
+    attachments?: Attachment[];
+    imageUrl?:string;
   }
+
+
+
+export interface Attachment {
+  text:string;
+  icon:"download"|"link";
+  url:string
+}

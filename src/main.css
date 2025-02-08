@@ -5,5 +5,10 @@
 
 @theme {
     /* --color-*: initial;  Uncomment to disable default tailwind color palette. */ 
-    --default-font-family: "Inter", "sans-serif"
+    --default-font-family: "Inter", "sans-serif";
+
+    --color-aapningerCategory: #F78482;
+    --color-gallerierCategory: #E1F2C2;
+    --color-fagpolitikkCategory: #F9D1BC;
+    --color-askjonerCategory: #DEDCEE;
   }

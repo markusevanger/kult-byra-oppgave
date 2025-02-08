@@ -1,79 +1,144 @@
 [
     {
+        "date": "1974",
+        "category": [
+            "Aksjoner"
+        ],
+        "title": "Kunstneraksjonen",
+        "description": "Kunstneraksjonen i 1974 var en viktig hendelse der en gruppe kunstnere gjennomførte en aksjon for å øke oppmerksomheten rundt kunstneres arbeid og endre offentlighetens oppfatning av kunst.",
+        "imageUrl": "./kunsteraksjonen.png",
+        "attachments": [
+            {
+                "text": "Last ned løpeseddel",
+                "icon": "download",
+                "url": ""
+            }
+        ]
+    },
+    {
         "date": "1975-01-04",
-        "category": ["Fagpolitikk"],
+        "category": [
+            "Fagpolitikk"
+        ],
         "title": "Navneendring",
         "description": "Organisasjonen gjennomgikk en viktig endring ved å endre sitt navn til, noe som markerte en ny epoke for kunsthåndverkere i Norge.",
+        "imageUrl": "./navneendring.png",
         "attachments": [
-            "Last ned referat fra navneendring"
+            {
+                "text": "Last ned referat fra navneendring",
+                "icon": "download",
+                "url": ""
+            }
+        ]
+    },
+    {
+        "date": "2012-12-13",
+        "category": [
+            "Gallerier",
+            "Åpninger"
+        ],
+        "title": "Etablering Format Bergen",
+        "description": "Format Bergen ble etablert i 2012, og markerte en betydningsfull utvidelse av kunstscenen i Bergen.",
+        "attachments": [
+            {
+                "text": "Besøk Format Bergen",
+                "icon": "link",
+                "url": ""
+            },
+            {
+                "text": "Last ned stiftelsesdokument",
+                "icon": "download",
+                "url": ""
+            }
+        ]
+    },
+    {
+        "date": "2015",
+        "category": [
+            "Fagpolitikk"
+        ],
+        "title": "Navn på hendelse",
+        "description": "En viktig hendelse innen fagpolitikk for kunsthåndverkere fant sted i 2015, med betydelige implikasjoner for bransjen.",
+        "imageUrl": "",
+        "attachments": [
+            {
+                "text": "Last ned",
+                "icon": "download",
+                "url": ""
+            }
         ]
     },
     {
         "date": "2016-01-04",
-        "category": ["Gallerier"],
+        "category": [
+            "Gallerier"
+        ],
         "title": "Etablering Galleri Vest",
         "description": "Galleri Vest ble etablert i 2016, og representerte en ny plattform for visning og formidling av kunsthåndverk i regionen.",
+        "imageUrl": "etablering.png",
         "attachments": [
-            "Besøk Galleri Vest",
-            "Last ned referat"
-        ]
-    },
-    {
-        "date": "2015-01-01",
-        "category": ["Fagpolitikk"],
-        "title": "Navn på hendelse",
-        "description": "En viktig hendelse innen fagpolitikk for kunsthåndverkere fant sted i 2015, med betydelige implikasjoner for bransjen.",
-        "attachments": [
-            "Last ned"
-        ]
-    },
-    {
-        "date": "1974-01-01",
-        "category": ["Aksjoner"],
-        "title": "Kunstneraksjonen",
-        "description": "Kunstneraksjonen i 1974 var en viktig hendelse der en gruppe kunstnere gjennomførte en aksjon for å øke oppmerksomheten rundt kunstneres arbeid og endre offentlighetens oppfatning av kunst.",
-        "attachments": [
-            "Last ned løpeseddel"
+            {
+                "text": "Besøk Galleri Vest",
+                "icon": "visit",
+                "url": ""
+            },
+            {
+                "text": "Last ned referat",
+                "icon": "download",
+                "url": ""
+            }
         ]
     },
     {
         "date": "2017-03-10",
-        "category": ["Aksjoner"],
+        "category": [
+            "Aksjoner"
+        ],
         "title": "Aksjon for kunstnerstipend",
         "attachments": [
-            "Last ned"
-        ]
-    },
-    {
-        "date": "2023-09-22",
-        "category": ["Gallerier"],
-        "title": "Galleri Vest utvides",
-        "attachments": [
-            "Last ned"
+            {
+                "text": "Last ned",
+                "icon": "download",
+                "url": ""
+            }
         ]
     },
     {
         "date": "2020-07-01",
-        "category": ["Hendelse"],
+        "category": [
+            "Hendelse"
+        ],
         "title": "Hendelse uten innhold"
     },
     {
-        "date": "2012-12-13",
-        "category": ["Gallerier", "Åpninger"],
-        "title": "Etablering Format Bergen",
-        "description": "Format Bergen ble etablert i 2012, og markerte en betydningsfull utvidelse av kunstscenen i Bergen.",
+        "date": "2021-09-04",
+        "category": [
+            "Åpninger",
+            "Fagpolitikk"
+        ],
+        "title": "Nyåpning",
+        "description": "En betydningsfull nyåpning fant sted, som markerte en ny fase eller utvidelse innen kunsthåndverkscenen.",
+        "imageUrl": "nyapning.png",
         "attachments": [
-            "Besøk Format Bergen",
-            "Last ned stiftelsesdokument"
+            {
+                "text": "Besøk Format Bergen",
+                "icon": "link",
+                "url": ""
+            }
         ]
     },
     {
-        "date": "2021-09-04",
-        "category": ["Åpninger", "Fagpolitikk"],
-        "title": "Nyåpning",
-        "description": "En betydningsfull nyåpning fant sted, som markerte en ny fase eller utvidelse innen kunsthåndverkscenen.",
+        "date": "2023-09-22",
+        "category": [
+            "Gallerier"
+        ],
+        "title": "Galleri Vest utvides",
         "attachments": [
-            "Besøk"
+            {
+                "text": "Last ned",
+                "icon": "download",
+                "url": ""
+            }
         ]
     }
 ]
