@@ -8,8 +8,6 @@ export interface Event {
     type: "default" | "highlighted" |  "special"
   }
 
-
-
 export interface Attachment {
   text:string;
   icon:"download"|"link";

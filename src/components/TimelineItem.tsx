@@ -3,13 +3,11 @@ import { Event, Attachment } from "./types";
 
 export default function TimelineItem({ event, datePlacement, className }: { event: Event; datePlacement: "left" | "right", className: string }) {
 
-
     const isLeft = datePlacement === "left"
     const isRight = datePlacement === "right"
 
     const isDefaultType = event.type === "default"
     const isSpecialType = event.type === "special"
-
 
     return (
         <div className={`  ${isLeft ? "ml-8" : "mr-8"} ${className}`}>
@@ -48,23 +46,25 @@ export default function TimelineItem({ event, datePlacement, className }: { even
                     {
                         event.imageUrl &&
                         <img className={`
-                            ${isDefaultType ? "aspect-square w-30" : "w-full"}
-                             object-cover`} src={event.imageUrl}></img>
+                            object-cover w-full shrink
+                            ${isDefaultType ? "aspect-square sm:w-30" : "w-full"}
+                            `}
+                            src={event.imageUrl}></img>
                     }
+
                     <div className="flex flex-col justify-center break-all text-wrap">
                         <ul className="flex gap-1 flex-wrap">
                             {event.category && event.category.map((category: string, index: number) => (
                                 <li key={index} className={` ${categoryColors[category]} w-fit p-2 rounded-full text-xs font-semibold`}>{category}</li>
                             ))}
                         </ul>
-                        <h2 className="font-semibold text-2xl text-wrap break-all mt-4 ">{event.title}</h2>
+
+                        <h2 className="font-semibold text-2xl text-wrap break-words mt-4 ">{event.title}</h2>
+
                     </div>
-
-
                 </div>
 
-                <p className="break-normal">{event.description}</p>
-
+                <p className="break-words">{event.description}</p>
 
                 <div className="flex gap-2">
                     {event.attachments && event.attachments.map((attachment: Attachment) => (
@@ -91,7 +91,6 @@ const categoryColors: { [key: string]: string } = {
     "Fagpolitikk": "bg-fagpolitikkcategory",
     "Aksjoner": "bg-aksjonercategory"
 };
-
 
 
 

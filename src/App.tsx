@@ -24,12 +24,13 @@ function App() {
 
 
   const [leftTimeline, rightTimeline] = splitEveryOther(timelineFilteredByDateRange);
+  const datePickerStyle = "border rounded-full px-4 h-full"
+
 
   useEffect(() => {
     setFromDate(new Date(timelineFilteredByCategory[0].date))
     setToDate(new Date(timelineFilteredByCategory[timeline.length - 1].date))
   }, [])
-
 
   const handleDateChange = (time: string, type: "from" | "to") => {
     const newDate = time ? new Date(time) : new Date();
@@ -37,27 +38,23 @@ function App() {
     else setToDate(newDate);
   };
 
-  const handleCategoryChange = (newCategory:string) => {
-    setSelectedCategory(newCategory)
-  }
-
-  const datePickerStyle = "border rounded-full px-4 h-full"
 
   return (
     <div className="w-full overflow-x-clip py-10 px-4">
 
+
       {/* Header */}
-      <div className="flex flex-col sm:flex-row justify-between">
+      <div className="flex flex-col md:flex-row justify-between">
         <h1 className="font-semibold text-2xl">Navn på tidslinje</h1>
 
 
         {/* Filter on Category */}
-        <div className="flex flex-col sm:flex-row gap-2">
+        <div className="flex flex-col sm:flex-row justify-between gap-2">
           <div className="flex flex-col">
             <label className="text-xs text-gray-400">FILTRER PÅ KATEGORI</label>
             <select
               value={selectedCategory}
-              onChange={(e) => handleCategoryChange(e.target.value)}
+              onChange={(e) => setSelectedCategory(e.target.value)}
               className="border rounded-full p-4 min-w-[200px]"
             >
               <option value="default">Alle Kategorier</option>
@@ -77,7 +74,7 @@ function App() {
               onChange={(e) => handleDateChange(e.target.value, "from")}>
             </input>
           </div>
-          <div className="flex flex-col h-full">
+          <div className="flex flex-col">
             <label className="text-xs text-gray-400">DATO TIL</label>
             <input className={datePickerStyle} type="date"
               value={toDate.toISOString().split('T')[0]}
@@ -90,11 +87,11 @@ function App() {
 
 
 
-
-
       {/* Timeline content */}
       <div className="w-full flex justify-center">
         {
+
+          // Timeline split into two for larger devices
           isMd ?
 
             <div className="flex md:max-w-300">
@@ -118,8 +115,9 @@ function App() {
             </div>
 
             :
-            <div className="flex">
 
+            // Timeline for mobile/small devices
+            <div className="flex">
               <ul className="flex flex-col flex-1">
                 {leftTimeline.map((event, index) => (
                   <li key={`left-${index}`}>
@@ -128,9 +126,8 @@ function App() {
                 ))}
 
               </ul>
-              <div className="border-r-1" />
+              <div className="border-r-1 mt-20" />
             </div>
-
         }
 
       </div>
