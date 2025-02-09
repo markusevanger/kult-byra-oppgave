@@ -39,8 +39,6 @@ function App() {
 
   const handleCategoryChange = (newCategory:string) => {
     setSelectedCategory(newCategory)
-    handleDateChange(timelineFilteredByCategory[0].date, "from")
-    handleDateChange(timelineFilteredByCategory[timelineFilteredByCategory.length-1].date, "to")
   }
 
   const datePickerStyle = "border rounded-full px-4 h-full"
@@ -108,7 +106,7 @@ function App() {
                 ))}
               </ul>
 
-              <div className="border-r-1" />
+              <div className="border-r-1 mt-20" />
 
               <ul className="mt-60 flex flex-col flex-1">
                 {rightTimeline.map((event, index) => (
