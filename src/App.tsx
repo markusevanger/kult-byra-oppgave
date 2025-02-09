@@ -1,6 +1,6 @@
 import TimelineItem from "./components/TimelineItem"
 import timelineData from "./content.json"
-import { Event } from "./components/Types.tsx"
+import { Event } from "./components/Types"
 import { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import { CodeXml } from "lucide-react";
