@@ -45,8 +45,8 @@ function App() {
 
 
       {/* Header */}
-      <div className="flex flex-col md:flex-row justify-between">
-        <h1 className="font-semibold text-2xl">Navn på tidslinje</h1>
+      <div className="flex flex-col md:flex-row items-center justify-between">
+        <h1 className="font-semibold text-4xl">Navn på tidslinje</h1>
 
 
         {/* Filter on Category */}
@@ -85,7 +85,8 @@ function App() {
         </div>
       </div>
 
-
+      
+      <hr className="mt-10 border border-gray-200"/>
 
 
       {/* Timeline content */}
