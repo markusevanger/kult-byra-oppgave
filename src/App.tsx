@@ -147,7 +147,7 @@ export default App
 
 
 
-{/* Helper function for splitting timeline into left/right*/ }
+// Helper function for splitting timeline into left/right
 function splitEveryOther<T>(list: T[]): [T[], T[]] {
   const list1: T[] = [];
   const list2: T[] = [];
