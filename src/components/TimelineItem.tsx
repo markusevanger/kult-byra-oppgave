@@ -1,5 +1,5 @@
 import { ArrowUpRight, Download } from "lucide-react";
-import { Event, Attachment } from "./types";
+import { Event, Attachment } from "./Types";
 
 export default function TimelineItem({ event, datePlacement, className }: { event: Event; datePlacement: "left" | "right", className: string }) {
 

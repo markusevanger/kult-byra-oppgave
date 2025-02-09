@@ -1,8 +1,9 @@
 import TimelineItem from "./components/TimelineItem"
 import timelineData from "./content.json"
-import { Event } from "./components/types"
+import { Event } from "./components/Types"
 import { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
+import { CodeXml } from "lucide-react";
 
 
 
@@ -132,8 +133,9 @@ function App() {
 
       </div>
 
-      <div className="w-full flex justify-center">
+      <div className="w-full flex justify-center gap-2">
         <p className="bg-highlightedCard px-4 py-2 rounded-full w-fit mt-12 text-center text-xs font-mono">Laget av <a className="underline" href="https://markusevanger.no" target="_blank">markusevanger.no</a> for <a href="https://kult.design" target="_blank" className="underline">Kult Byrå</a> 🌐</p>
+        <p className="flex gap-2 items-center bg-highlightedCard px-4 py-2 rounded-full w-fit mt-12 text-center text-xs font-mono"><CodeXml size={16} /><a className="underline" href="https://github.com/markusevanger/kult-byra-oppgave" target="_blank">Kode</a></p>
       </div>
     </div>
   )
