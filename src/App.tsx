@@ -1,7 +1,6 @@
 import TimelineItem from "./components/TimelineItem"
 import timelineData from "./content.json"
 import { Event } from "./components/types"
-import { useMediaQuery } from 'react-responsive';
 import { useState } from "react";
 
 
@@ -16,7 +15,6 @@ function App() {
 
   const splitTimeline = splitEveryOther(timelineFiltered)
 
-  const isMd = useMediaQuery({ minWidth: 768 });
 
 
 
