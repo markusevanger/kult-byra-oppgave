@@ -25,10 +25,10 @@ export default function TimelineItem({ event, dataPlacement }: { event: Event; d
                         event.imageUrl &&
                         <img className="w-40 aspect-square object-cover" src={event.imageUrl}></img>
                     }
-                    <div className="">
+                    <div>
                         <div className="flex gap-1">
-                            {event.category.map((category: string) => (
-                                <p className={`bg-${categoryColor(category)} w-fit p-2 rounded-full text-xs font-semibold`} key={category}>{category}</p>
+                            {event.category && event.category.map((category: string) => (
+                                <p className={` ${categoryColors[category]} w-fit p-2 rounded-full text-xs font-semibold`} key={category}>{category}</p>
                             ))}
                         </div>
                         <h2 className="font-semibold text-xl text-wrap">{event.title}</h2>
@@ -51,18 +51,26 @@ export default function TimelineItem({ event, dataPlacement }: { event: Event; d
     )
 }
 
+
+
+
 const buttonIcon = (type: "link" | "download") => {
     if (type == "link") return <Link size={16} />
     else return <Download size={16} />
 }
 
-const categoryColor = (category: string) => {
-    if (category == "Gallerier") return "gallerierCategory"
-    else if (category == "Åpninger") return "aapningerCategory"
-    else if (category == "Fagpolitikk") return "fagpolitikkCategory"
-    else if (category == "Askjoner") return "askjonerCategory"
-    else return "red-500"
-}
+
+
+
+const categoryColors: { [key: string]: string } = {
+    "Gallerier": "bg-galleriercategory",
+    "Åpninger": "bg-aapningercategory",
+    "Fagpolitikk": "bg-fagpolitikkcategory",
+    "Aksjoner": "bg-aksjonercategory"
+};
+
+
+
 
 const formatDate = (dateString: string): string => {
     const dateParts = dateString.split('-');
@@ -76,7 +84,7 @@ const formatDate = (dateString: string): string => {
         'januar', 'februar', 'mars', 'april', 'mai', 'juni',
         'juli', 'august', 'september', 'oktober', 'november', 'desember'
     ];
-    
+
     // If year, month and day
     const year = dateParts[0];
     const month = parseInt(dateParts[1], 10);

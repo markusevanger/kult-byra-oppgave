@@ -1,6 +1,6 @@
 export interface Event {
     date: string;
-    category: string[];
+    category?: string[];
     title: string;
     description?: string;
     attachments?: Attachment[];
