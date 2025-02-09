@@ -1,37 +1,61 @@
 import { Download, Link } from "lucide-react";
 import { Event, Attachment } from "./types";
 
-export default function TimelineItem({ event, dataPlacement }: { event: Event; dataPlacement: "left" | "right" }) {
+export default function TimelineItem({ event, datePlacement, className }: { event: Event; datePlacement: "left" | "right", className: string }) {
+
+
+    const isLeft = datePlacement === "left"
+    const isRight = datePlacement === "right"
+
+    const isDefaultType = event.type === "default"
+    const isSpecialType = event.type === "special"
+
 
     return (
-        <li className={`mb-20 flex flex-col ${dataPlacement == "right" && "items-end"}`}>
-            <div className={`flex ${dataPlacement == "right" && "justify-end"}`}>
-                <hr className={`border-t-1 w-20 translate-y-10`} />
+        <div className={`  ${isLeft ? "ml-8" : "mr-8"} ${className}`}>
+
+            <div className={`flex flex-col ${isRight && "items-end"}`}>
+                <div>
+                    
+                </div>
+                <div className={`flex ${isRight && "justify-end"}`}>
+                    <hr className={`border-t-1 w-20 translate-y-13 ${isLeft ? "-translate-x-8" : "translate-x-8"}`} />
+                </div>
+
+                <div className={`bg-black h-4 w-4 rounded-full  aspect-square translate-y-11 ${isLeft ? "-translate-x-10" : "translate-x-10"}`} />
+
+                <div className={`w-full flex  bg-cover ${isSpecialType && "bg-[url(./art.png)]"} ${isRight && "justify-end"}`}>
+                    <div className={`${event.type == "special" ? "bg-specialCard" : event.type == "highlighted" ? "bg-highlightedCard" : "bg-white"}  px-8  border border-b-0 p-6 translate-y-0.5 w-fit rounded-tl-md rounded-tr-md text-wrap`}>
+                        {formatDate(event.date)}
+                    </div>
+                </div>
             </div>
 
-            <div className={`bg-black h-4 w-4 rounded-full  aspect-square translate-y-8 ${dataPlacement == "left" ? "-translate-x-2" : "translate-x-2"}`} />
-
-            <div className={`${dataPlacement == "left" ? "ml-8" : "mr-8"} px-8  border border-b-0 p-6 translate-y-0.25 w-fit bg-white rounded-tl-md rounded-tr-md`}>
-                {formatDate(event.date)}
-            </div>
 
 
 
+            <div className={`
+                ${event.type == "special" ? "bg-specialCard" : event.type == "highlighted" ? "bg-highlightedCard" : "bg-white"} 
+                ${isLeft ? "rounded-tr-md" : "rounded-tl-md"} 
+                flex flex-col gap-8 w-full p-8 border rounded-bl-md rounded-br-md`}>
 
-            <div className={`${dataPlacement == "left" ? "ml-8" : "mr-8"} flex  flex-col gap-8 w-full p-8 border rounded-bl-md rounded-br-md ${dataPlacement == "left" ? "rounded-tr-md" : "rounded-tl-md"}`}>
-
-                <div className="flex gap-5 ">
+                <div className={
+                    `
+                    ${isDefaultType ? "" : "flex-col"}
+                    flex  gap-8`}>
                     {
                         event.imageUrl &&
-                        <img className="w-40 aspect-square object-cover" src={event.imageUrl}></img>
+                        <img className={`
+                            ${isDefaultType ? "aspect-square w-40" : "w-full"}
+                             object-cover`} src={event.imageUrl}></img>
                     }
                     <div>
-                        <div className="flex gap-1">
-                            {event.category && event.category.map((category: string) => (
-                                <p className={` ${categoryColors[category]} w-fit p-2 rounded-full text-xs font-semibold`} key={category}>{category}</p>
+                        <ul className="flex gap-1 flex-wrap">
+                            {event.category && event.category.map((category: string, index: number) => (
+                                <li key={index} className={` ${categoryColors[category]} w-fit p-2 rounded-full text-xs font-semibold`}>{category}</li>
                             ))}
-                        </div>
-                        <h2 className="font-semibold text-xl text-wrap">{event.title}</h2>
+                        </ul>
+                        <h2 className="font-semibold text-xl text-wrap mt-4">{event.title}</h2>
                     </div>
 
 
@@ -42,12 +66,12 @@ export default function TimelineItem({ event, dataPlacement }: { event: Event; d
 
                 <div className="flex gap-2">
                     {event.attachments && event.attachments.map((attachment: Attachment) => (
-                        <button className="text-sm cursor-pointer flex gap-2 items-center border rounded-full p-2 px-4">{attachment.text} {buttonIcon(attachment.icon)}</button>
+                        <button key={attachment.text} className="text-sm cursor-pointer flex gap-2 items-center border rounded-full p-2 px-4">{attachment.text} {buttonIcon(attachment.icon)}</button>
                     ))}
                 </div>
 
             </div>
-        </li>
+        </div>
     )
 }
 

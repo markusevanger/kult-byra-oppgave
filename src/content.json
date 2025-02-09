@@ -5,6 +5,7 @@
             "Aksjoner"
         ],
         "title": "Kunstneraksjonen",
+        "type": "default",
         "description": "Kunstneraksjonen i 1974 var en viktig hendelse der en gruppe kunstnere gjennomførte en aksjon for å øke oppmerksomheten rundt kunstneres arbeid og endre offentlighetens oppfatning av kunst.",
         "imageUrl": "./kunsteraksjonen.png",
         "attachments": [
@@ -21,6 +22,7 @@
             "Fagpolitikk"
         ],
         "title": "Navneendring",
+        "type": "default",
         "description": "Organisasjonen gjennomgikk en viktig endring ved å endre sitt navn til, noe som markerte en ny epoke for kunsthåndverkere i Norge.",
         "imageUrl": "./navneendring.png",
         "attachments": [
@@ -38,7 +40,9 @@
             "Åpninger"
         ],
         "title": "Etablering Format Bergen",
+        "type": "special",
         "description": "Format Bergen ble etablert i 2012, og markerte en betydningsfull utvidelse av kunstscenen i Bergen.",
+        "imageUrl": "etablering.png",
         "attachments": [
             {
                 "text": "Besøk Format Bergen",
@@ -58,6 +62,7 @@
             "Fagpolitikk"
         ],
         "title": "Navn på hendelse",
+        "type": "default",
         "description": "En viktig hendelse innen fagpolitikk for kunsthåndverkere fant sted i 2015, med betydelige implikasjoner for bransjen.",
         "imageUrl": "",
         "attachments": [
@@ -74,8 +79,9 @@
             "Gallerier"
         ],
         "title": "Etablering Galleri Vest",
+        "type": "default",
         "description": "Galleri Vest ble etablert i 2016, og representerte en ny plattform for visning og formidling av kunsthåndverk i regionen.",
-        "imageUrl": "etablering.png",
+        "imageUrl": "./navneendring.png",
         "attachments": [
             {
                 "text": "Besøk Galleri Vest",
@@ -95,6 +101,7 @@
             "Aksjoner"
         ],
         "title": "Aksjon for kunstnerstipend",
+        "type": "default",
         "attachments": [
             {
                 "text": "Last ned",
@@ -105,7 +112,8 @@
     },
     {
         "date": "2020-07-01",
-        "title": "Hendelse uten innhold"
+        "title": "Hendelse uten innhold",
+        "type": "default"
     },
     {
         "date": "2021-09-04",
@@ -116,6 +124,7 @@
         "title": "Nyåpning",
         "description": "En betydningsfull nyåpning fant sted, som markerte en ny fase eller utvidelse innen kunsthåndverkscenen.",
         "imageUrl": "nyapning.png",
+        "type": "highlighted",
         "attachments": [
             {
                 "text": "Besøk Format Bergen",
@@ -130,6 +139,7 @@
             "Gallerier"
         ],
         "title": "Galleri Vest utvides",
+        "type": "default",
         "attachments": [
             {
                 "text": "Last ned",

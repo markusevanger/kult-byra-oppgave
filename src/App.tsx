@@ -6,7 +6,6 @@ import { useState } from "react";
 
 
 
-
 function App() {
 
   const [selectedCategory, setSelectedCategory] = useState("default");
@@ -22,7 +21,7 @@ function App() {
 
 
   return (
-    <div className="p-4">
+    <div className="w-full overflow-x-clip py-10 px-4">
 
       {/* Header */}
       <div className="flex justify-between">
@@ -31,7 +30,7 @@ function App() {
           <div className="flex flex-col">
             <label className="text-xs text-gray-400">FILTRER PÅ KATEGORI</label>
             <select
-              value={selectedCategory}  // Ensure only one value is selected
+              value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
               className="border rounded-full p-4 min-w-[200px]"
             >
@@ -42,7 +41,6 @@ function App() {
                 )
               }
             </select>
-
           </div>
         </div>
       </div>
@@ -51,18 +49,35 @@ function App() {
 
 
       {/* Timeline content */}
-      <div className="w-full flex justify-center">
+
+      <div className="w-full flex justify-center">'
+        {/* 
+           
+            Ideen her er å vise en "to" kolonners tidslinje på 
+           
+           
+           */}
         {
-          isMd ?
-            <div className="flex p-8 md:max-w-300">
-              <ul className="flex flex-col flex-2">{splitTimeline[0].map((event: Event, index: number) => <TimelineItem dataPlacement="right" key={index} event={event} />)}</ul>
-              <div className="border-r-1" />
-              <ul className="mt-20 flex flex-col flex-2">{splitTimeline[1].map((event: Event, index: number) => <TimelineItem dataPlacement="left" key={index} event={event} />)}</ul>
-            </div>
-            :
-            <div>
-              {/* Mobile Layout based on normal timeline (assuming its one column.*/}
-            </div>
+          <div className="flex md:max-w-300">
+            <ul className="flex flex-col flex-1">
+              {splitTimeline[0].map((event, index) => (
+                <li key={`left-${index}`}>
+                  <TimelineItem className={""} event={event} datePlacement="right" />
+                </li>
+              ))}
+            </ul>
+
+            <div className="border-r-1" />
+
+            <ul className="mt-60 flex flex-col flex-1">
+              {splitTimeline[1].map((event, index) => (
+                <li key={`right-${index}`}>
+                  <TimelineItem className={""} event={event} datePlacement="left" />
+                </li>
+              ))}
+            </ul>
+          </div>
+
         }
 
       </div>
@@ -80,11 +95,17 @@ export default App
 
 {/* Helper function for timeline*/ }
 function splitEveryOther<T>(list: T[]): [T[], T[]] {
-  const list1 = list.map((item, index) => (index % 2 === 0 ? item : undefined)).filter((item): item is T => item !== undefined);
-  const list2 = list.map((item, index) => (index % 2 !== 0 ? item : undefined)).filter((item): item is T => item !== undefined);
+  const list1: T[] = [];
+  const list2: T[] = [];
+
+  list.forEach((item, index) => {
+    if (index % 2 === 0) list1.push(item);
+    else list2.push(item);
+  });
 
   return [list1, list2];
 }
+
 
 
 const getUniqueCategories = (events: Event[]): string[] => {
