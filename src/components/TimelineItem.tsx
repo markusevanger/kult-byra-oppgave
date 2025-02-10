@@ -24,7 +24,7 @@ export default function TimelineItem({ event, datePlacement, className }: { even
                 <div className={`bg-black h-4 w-4 rounded-full  aspect-square translate-y-11 ${isLeft ? "-translate-x-10" : "translate-x-10"}`} />
 
                 {/* Date Notch */}
-                <div className={`w-full flex  bg-cover ${isSpecialType && "bg-[url(./art.png)]"} ${isRight && "justify-end"}`}>
+                <div className={`w-full flex  bg-cover ${isSpecialType && "bg-[url(/art.png)]"} ${isRight && "justify-end"}`}>
                     <div className={`${event.type == "special" ? "bg-specialCard" : event.type == "highlighted" ? "bg-highlightedCard" : "bg-white"}  px-8  border border-b-0 p-6 translate-y-0.5 w-fit rounded-tl-md rounded-tr-md text-wrap`}>
                         <p className="font-semibold">{formatDate(event.date)}</p>
                     </div>
